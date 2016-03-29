@@ -1,0 +1,5 @@
+sudo launchctl unload /System/Library/LaunchDaemons/org.postfix.master.plist
+sudo launchctl load /System/Library/LaunchDaemons/org.postfix.master.plist
+sudo mkdir -p /Library/Server/Mail/Data/spool
+sudo /usr/sbin/postfix set-permissions
+sudo /usr/sbin/postfix start

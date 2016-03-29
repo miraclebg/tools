@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<ruleset name="NimasystemsGeneric">
+    <description>The NimasystemsGeneric coding standard.</description>
+
+    <!--
+
+    See the [documented coding standard](http://symfony.com/doc/current/contributing/code/standards.html)
+
+    This CodeSniffer standard does not yet enforce the following:
+
+    # Structure
+
+    * Declare class properties before methods;
+    * Declare public methods first, then protected ones and finally private ones.
+    * Use namespaces for all classes;
+    * Add PHPDoc blocks for all classes, methods, and functions;
+    * The @package and @subpackage annotations are not used.
+    * Use uppercase strings for constants with words separated with underscores
+
+    # Naming Conventions
+
+    * Use underscores for option, argument, parameter names;
+
+    -->
+    
+    <rule ref="Generic.ControlStructures.InlineControlStructure"/>
+    <rule ref="Generic.Functions.CallTimePassByReference"/>
+    <rule ref="Generic.NamingConventions.UpperCaseConstantName"/>
+    <rule ref="Generic.PHP.LowerCaseConstant"/>
+    <rule ref="Squiz.PHP.LowercasePHPFunctions"/>
+    <rule ref="Squiz.Scope.MemberVarScope"/>
+    
+    <!-- Variable analysis -->
+    <rule ref="NimasystemsGeneric.CodeAnalysis.VariableAnalysis"/>
+    
+    <rule ref="Generic.Formatting.SpaceAfterCast.NoSpace">
+        <severity>0</severity>
+    </rule>
+    
+    <rule ref="NimasystemsGeneric.Commenting.FunctionComment.WrongStyle">
+        <severity>0</severity>
+    </rule>
+    
+    <rule ref="NimasystemsGeneric.WhiteSpace.DiscourageFitzinator">
+        <severity>0</severity>
+    </rule>
+    
+    <rule ref="Zend.Files.ClosingTag.NotAllowed">
+        <severity>0</severity>
+    </rule>
+    
+    <!-- Ignore variables that contains numbers -->
+    <rule ref="Zend.NamingConventions.ValidVariableName.ContainsNumbers">
+        <severity>0</severity>
+    </rule>
+
+    <!-- In practice, NimasystemsGeneric spaces multiline function calls differently than Zend -->
+    <rule ref="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket">
+        <severity>0</severity>
+    </rule>
+    <rule ref="PEAR.Functions.FunctionCallSignature.CloseBracketLine">
+        <severity>0</severity>
+    </rule>
+    <rule ref="NimasystemsGeneric.Commenting.FunctionComment.MissingParamComment">
+        <severity>0</severity>
+    </rule>
+    <rule ref="Generic.WhiteSpace.DisallowTabIndent.TabsUsed">
+        <severity>0</severity>
+    </rule>
+    <rule ref="NimasystemsGeneric.Commenting.FunctionComment.SpacingBeforeTags">
+        <severity>0</severity>
+    </rule>
+    <rule ref="PEAR.WhiteSpace.ScopeClosingBrace.BreakIdent">
+        <severity>0</severity>
+    </rule>
+    <rule ref="Zend.NamingConventions.ValidVariableName.NotCamelCaps">
+        <severity>0</severity>
+    </rule>
+    <rule ref="Zend.NamingConventions.ValidVariableName.PrivateNoUnderscore">
+        <severity>0</severity>
+    </rule>
+    <rule ref="NimasystemsGeneric.Commenting.ClassComment.Missing">
+        <severity>0</severity>
+    </rule>
+    <rule ref="NimasystemsGeneric.Commenting.FunctionComment.Missing">
+        <severity>0</severity>
+    </rule>
+    <rule ref="NimasystemsGeneric.NamingConventions.InterfaceSuffix">
+        <severity>0</severity>
+    </rule>
+    <rule ref="PEAR.Functions.FunctionCallSignature.Indent">
+        <severity>0</severity>
+    </rule>
+    <rule ref="NimasystemsGeneric.Formatting.BlankLineBeforeReturn">
+        <severity>0</severity>
+    </rule>
+    <rule ref="Zend.NamingConventions.ValidVariableName.MemberVarNotCamelCaps">
+        <severity>0</severity>
+    </rule>
+    <rule ref="NimasystemsGeneric.Commenting.FunctionComment.MissingParamTag">
+        <severity>0</severity>
+    </rule>
+    <rule ref="NimasystemsGeneric.Commenting.ClassComment.WrongStyle">
+        <severity>0</severity>
+    </rule>
+    <rule ref="PEAR.WhiteSpace.ScopeClosingBrace.Indent">
+        <severity>0</severity>
+    </rule>
+    <!-- conflicts with regex methods -->
+    <rule ref="PEAR.Functions.FunctionCallSignature.SpaceBeforeOpenBracket">
+        <severity>0</severity>
+    </rule>
+    <rule ref="PEAR.WhiteSpace.ScopeClosingBrace.Line">
+        <severity>0</severity>
+    </rule>
+    <rule ref="NimasystemsGeneric.Commenting.ClassComment.SpacingAfterShort">
+        <severity>0</severity>
+    </rule>
+    <rule ref="NimasystemsGeneric.Commenting.ClassComment.InvalidPackage">
+        <severity>0</severity>
+    </rule>
+    <rule ref="NimasystemsGeneric.Commenting.ClassComment.TagIndent">
+        <severity>0</severity>
+    </rule>
+    <rule ref="Zend.NamingConventions.ValidVariableName.StringVarNotCamelCaps">
+        <severity>0</severity>
+    </rule>
+    <rule ref="NimasystemsGeneric.Commenting.FunctionComment.ParameterCommentsNotAligned">
+        <severity>0</severity>
+    </rule>
+    <rule ref="NimasystemsGeneric.Commenting.FunctionComment.ParameterNamesNotAligned">
+        <severity>0</severity>
+    </rule>
+    <rule ref="NimasystemsGeneric.Commenting.ClassComment.SpacingBeforeTags">
+        <message>There should always be a description, followed by a blank line, before the tags of a class comment.</message>
+    </rule>
+</ruleset>
